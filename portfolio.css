@@ -43,7 +43,7 @@ html {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-size: large;
+  font-size: 1rem;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0px;
 }
@@ -75,15 +75,20 @@ section:nth-child(2n + 4) {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
   color: var(--text-color);
   .nav-logo {
     font-weight: 800;
     margin-left: 3vw;
     margin-right: 2vw;
+    text-decoration: none;
+    margin-top: 1vw;
+    color:black;
   }
   .nav-links {
     display: flex;
     cursor: pointer;
+    flex-wrap: wrap;
     margin-right: 3vw;
     .nav-tab {
       margin: 1vw;
@@ -97,9 +102,10 @@ section:nth-child(2n + 4) {
 }
 
 .landing-pane {
-  font-size: 2vh;
+  font-size: 1.25rem;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   .intro {
     width: 50%;
     transform: translateX(-100%);
@@ -148,7 +154,7 @@ section:nth-child(2n + 4) {
       background-color: transparent;
       margin: 1vh;
       text-align: left;
-      font-size: 1vw;
+      font-size: 1.25rem;
       transition: background-color 0.8s ease;
       padding: 5% 2%;
     }
@@ -174,10 +180,10 @@ section:nth-child(2n + 4) {
       .comp-name {
         color: var(--hover-color);
         font-weight: bolder;
-        font-size: 2vw;
+        font-size: 3rem;
       }
       .position {
-        font-size: 1vw;
+        font-size: 1.5rem;
         font-weight: bold;
       }
     }
@@ -185,7 +191,7 @@ section:nth-child(2n + 4) {
       text-align: right;
     }
     .desc {
-      font-size: 1vw;
+      font-size: 1.25rem;
     }
   }
   .show-exp.active {
@@ -223,12 +229,12 @@ section:nth-child(2n + 4) {
         padding-top: 2vw;
         .prj-title {
           color: var(--hover-color);
-          font-size: 1vw;
+          font-size: 2rem;
           text-align: center;
           font-weight: bold;
         }
         .prj-desc {
-          font-size: 1vw;
+          font-size: 1rem;
           padding-top: 2%;
         }
       }
@@ -241,7 +247,7 @@ section:nth-child(2n + 4) {
 
 .skills {
   .skills-description {
-    font-size: 1vw;
+    font-size: 1.25rem;
   }
   .skills-grid {
     display: grid;
@@ -252,7 +258,6 @@ section:nth-child(2n + 4) {
   }
 
   .skills-grid img {
-    font-size: 50px;
     transition: transform 0.3s ease;
   }
 
@@ -272,7 +277,7 @@ section:nth-child(2n + 4) {
       width: 60%;
       .about-desc {
         margin-bottom: 10%;
-        font-size: 1.2vw;
+        font-size: 1.25rem;
       }
       .socials {
         display: flex;
@@ -297,7 +302,7 @@ section:nth-child(2n + 4) {
       .book-coffee {
         background-color: transparent;
         width: 100%;
-        font-size: 2vh;
+        font-size: 1rem;
         font-weight: bolder;
         padding: 5%;
         border: 2px solid var(--hover-color);

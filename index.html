@@ -15,14 +15,18 @@
   </head>
   <body>
     <div class="navigation-bar">
-      <div class="nav-logo">
-        <p>Nav Logo</p>
-      </div>
+      <a class="nav-logo" href="#landing">Nikhil Oke</a>
       <div class="nav-links">
         <a class="nav-tab" href="#experience">Experiences</a>
         <a class="nav-tab" href="#projects">Projects</a>
         <a class="nav-tab" href="#skills">Skills</a>
         <a class="nav-tab" href="#about">About</a>
+        <a
+          class="nav-tab"
+          href="./assets/Nikhil_Oke_Resume.pdf"
+          download="Nikhil_Oke_Resume.pdf"
+          >Resume</a
+        >
       </div>
     </div>
     <section class="landing" id="landing">
@@ -344,6 +348,7 @@
       window.onload = function () {
         document.getElementById("sel-button").click();
         document.getElementById("sel-button").focus();
+        window.scrollTo(0, 0);
       };
 
       document.addEventListener("DOMContentLoaded", function () {
