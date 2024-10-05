@@ -1,0 +1,364 @@
+<html>
+  <head>
+    <title>Nikhil Oke</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Nikhil Oke, Software Engineer experienced in full stack web development across various tech stacks"
+    />
+    <link rel="stylesheet" href="portfolio.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="navigation-bar">
+      <div class="nav-logo">
+        <p>Nav Logo</p>
+      </div>
+      <div class="nav-links">
+        <a class="nav-tab" href="#experience">Experiences</a>
+        <a class="nav-tab" href="#projects">Projects</a>
+        <a class="nav-tab" href="#skills">Skills</a>
+        <a class="nav-tab" href="#about">About</a>
+      </div>
+    </div>
+    <section class="landing" id="landing">
+      <div class="landing-pane">
+        <div class="intro">
+          <h1>
+            Hello! 👋 and Namaste 🙏 <br />
+            I'm Nikhil Oke
+          </h1>
+          <p>
+            A passionate <strong>Software Engineer</strong> who thrives on
+            solving complex problems with clean and efficient code. From
+            building scalable backend systems to crafting intuitive user
+            experiences, I love every bit of it! With over 2 years of hands-on
+            experience, I'm on a journey to create impactful solutions in the
+            tech world.
+          </p>
+          <p>
+            When I’m not coding, you’ll find me exploring new technologies,
+            contributing to open-source, or refining my latest side project.
+            Welcome to my portfolio – let’s dive into some code!
+          </p>
+
+          <button class="explore">Let's Explore</button>
+        </div>
+        <img class="img" src="./assets/portfolio_img.jpg" />
+      </div>
+    </section>
+    <section class="experience" id="experience">
+      <p class="sec-heading">
+        Let's talk about
+        <span class="head-color"> <strong>Work</strong>!!</span>
+      </p>
+      <div class="experience-flex">
+        <div class="exp-tabs" id="exp-tabs">
+          <button class="exp-tab" onClick="showCompany(0)" id="sel-button">
+            Select Health
+          </button>
+          <button class="exp-tab" onClick="showCompany(1)" id="bing-button">
+            Binghamton University
+          </button>
+          <button class="exp-tab" onClick="showCompany(2)" id="weag-button">
+            WeAgile Software Solutions
+          </button>
+          <button class="exp-tab" onClick="showCompany(3)" id="acc-button">
+            Accenture
+          </button>
+        </div>
+        <div class="show-exp .active" id="show-exp">
+          <div class="exp">
+            <div>
+              <div class="comp-name" id="compName"></div>
+              <div class="position" id="pos"></div>
+            </div>
+            <div class="info">
+              <div>
+                <i
+                  class="fas fa-map-marker-alt"
+                  style="color: var(--hover-color); margin-right: 2%"
+                ></i>
+                <span class="location" id="location"></span>
+              </div>
+              <div class="duration" id="date"></div>
+            </div>
+          </div>
+          <p class="desc" id="desc"></p>
+        </div>
+      </div>
+    </section>
+    <section class="projects" id="projects">
+      <div
+        class="sec-heading"
+        style="color: var(--hover-color); text-align: center"
+      >
+        <strong>Projects</strong>
+      </div>
+      <div class="grid-container" id="grid-container">
+        <div class="grid-item">
+          <img src="./assets/tic-tac-toe.svg" class="prj-img" />
+          <div class="prj-info">
+            <div class="prj-title">Tic Tac Toe</div>
+            <div class="prj-desc">
+              An online web app where users can play Tic Tac Toe remotely.
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="./assets/chat.svg" class="prj-img" />
+          <div class="prj-info">
+            <div class="prj-title">Chat App</div>
+            <div class="prj-desc">
+              An online web app where users communicate with friends or group of
+              friends.
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="./assets/job-search-svgrepo-com.svg" class="prj-img" />
+          <div class="prj-info">
+            <div class="prj-title">Job Track Application</div>
+            <div class="prj-desc">
+              A web app where users can track their job applications, followups
+              and linkedin referrals.
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="./assets/web-page-svgrepo-com.svg" class="prj-img" />
+          <div class="prj-info">
+            <div class="prj-title">Portfolio Website</div>
+            <div class="prj-desc">A personal website to showcase who am I.</div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="./assets/whiteboard-svgrepo-com.svg" class="prj-img" />
+          <div class="prj-info">
+            <div class="prj-title">White Board App</div>
+            <div class="prj-desc">
+              An application where multiple users could share a room and discuss
+              on a whiteboard.
+            </div>
+          </div>
+        </div>
+        <div class="grid-item">
+          <img src="./assets/kanban-board-svgrepo-com.svg" class="prj-img" />
+          <div class="prj-info">
+            <div class="prj-title">Kanban Board</div>
+            <div class="prj-desc">
+              An application where user could track their day to day tasks and
+              move them to the next stages.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="skills" id="skills">
+      <p class="sec-heading">
+        Skills in
+        <span class="head-color"> <strong>Action</strong>!!</span>
+      </p>
+      <p class="skills-description">
+        Crafting scalable solutions is my passion. Over the years, I've mastered
+        a blend of frontend and backend technologies that enable me to build
+        full-stack applications. From structuring efficient databases to
+        creating pixel-perfect interfaces, I take pride in using the right tools
+        for the job. Here are some of the technologies I work with:
+      </p>
+      <div class="skills-grid">
+        <img
+          src="./assets//skills/react-javascript-js-framework-facebook-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/angular-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/aws-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/c-sharp-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/docker-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/dotnet-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/java-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/javascript-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/kubernetes-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/material-ui-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/mongodb-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/node-js-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/redux-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/sql-database-sql-azure-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/typescript-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/spring-boot-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/python-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/graphql-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/html-5-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/css-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+        <img
+          src="./assets//skills/tailwindcss-icon-svgrepo-com.svg"
+          height="80%"
+          width="80%"
+        />
+      </div>
+    </section>
+    <section class="life" id="about">
+      <div>
+        <p class="sec-heading">
+          Life Beyond
+          <span class="head-color"> <strong>Work</strong>!!</span>
+        </p>
+      </div>
+      <div class="about-sec">
+        <div class="about">
+          <div class="about-desc">
+            <span style="font-size: 2vw; color: var(--hover-color)"
+              ><strong>I</strong></span
+            >’m always up for a new adventure-whether it’s hiking a new trail,
+            cooking up a storm, or diving into a gaming session. Having moved
+            from India to the US, I’ve learned to embrace change and enjoy the
+            ride. When I’m not gaming or experimenting in the kitchen, you’ll
+            find me pushing my limits at hackathons. Hit me up over a coffee by
+            submitting the form on the right, or connect with me on socials!
+          </div>
+          <div class="socials">
+            <img
+              src="./assets/socials/linkedin-svgrepo-com.svg"
+              height="50%"
+              width="50%"
+              onClick="openTab('https://www.linkedin.com/in/nikhil-oke/')"
+            />
+            <img
+              src="/assets/socials/github-142-svgrepo-com.svg"
+              height="50%"
+              width="50%"
+              onclick="openTab('https://github.com/NikhilRajivOke')"
+            />
+            <img
+              src="/assets/socials/instagram-color-svgrepo-com.svg"
+              height="50%"
+              width="50%"
+              onClick="openTab('https://www.instagram.com/_monuu_1997/')"
+            />
+            <img
+              src="/assets/socials/leetcode-svgrepo-com.svg"
+              height="50%"
+              width="50%"
+              onclick="openTab('https://leetcode.com/u/NikhilOke/')"
+            />
+          </div>
+        </div>
+        <div class="coffee-form">
+          <img
+            src="./assets/coffee-to-go-svgrepo-com.svg"
+            height="50%"
+            width="50%"
+          />
+          <button
+            class="book-coffee"
+            onClick="openTab('https://calendly.com/nikhiloke97/meeting-with-nikhil')"
+          >
+            Schedule a Coffee meet !!
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="portfolio.js"></script>
+    <script>
+      window.onload = function () {
+        document.getElementById("sel-button").click();
+        document.getElementById("sel-button").focus();
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        });
+        const experienceTabs = document.getElementById("exp-tabs");
+        observer.observe(experienceTabs);
+        observer.observe(document.getElementById("show-exp"));
+        observer.observe(document.getElementById("grid-container"));
+      });
+    </script>
+  </body>
+</html>
