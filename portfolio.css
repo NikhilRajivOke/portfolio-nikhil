@@ -43,66 +43,22 @@ html {
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-size: 1rem;
+  font-size: 16px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   margin: 0px;
 }
 
 section {
-  min-height: 400px;
   padding: 6% 10%;
   .sec-heading {
-    font-size: 3vw;
+    font-size: 3.5rem;
     .head-color {
-      color: var(--hover-color);
-    }
-  }
-}
-section:nth-child(odd) {
-  background-color: var(--background-color);
-  padding-top: 0%;
-}
-section:nth-child(2n) {
-  background-color: var(--background-color-alt);
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-}
-section:nth-child(2n + 4) {
-  background-color: var(--background-color-alt);
-  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
-}
-
-.navigation-bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  color: var(--text-color);
-  .nav-logo {
-    font-weight: 800;
-    margin-left: 3vw;
-    margin-right: 2vw;
-    text-decoration: none;
-    margin-top: 1vw;
-    color:black;
-  }
-  .nav-links {
-    display: flex;
-    cursor: pointer;
-    flex-wrap: wrap;
-    margin-right: 3vw;
-    .nav-tab {
-      margin: 1vw;
-      text-decoration: none;
-      color: black;
-    }
-    .nav-tab:hover {
       color: var(--hover-color);
     }
   }
 }
 
 .landing-pane {
-  font-size: 1.25rem;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -115,7 +71,7 @@ section:nth-child(2n + 4) {
       margin-top: 5vh;
       display: inline-block;
       background-color: transparent;
-      padding: 15px 60px;
+      padding: 2%;
       border: 2px solid black;
       width: 60%;
       font-size: 2vh;
@@ -135,6 +91,36 @@ section:nth-child(2n + 4) {
     transform: rotate(4deg);
     opacity: 0;
     animation: fadeIn 2s ease-in forwards;
+  }
+}
+
+.navigation-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: var(--text-color);
+  .nav-logo {
+    font-weight: 800;
+    margin-left: 3vw;
+    margin-right: 2vw;
+    text-decoration: none;
+    margin-top: 1vw;
+    color: black;
+  }
+  .nav-links {
+    display: flex;
+    cursor: pointer;
+    flex-wrap: wrap;
+    margin-right: 3vw;
+    .nav-tab {
+      margin: 1vw;
+      text-decoration: none;
+      color: black;
+    }
+    .nav-tab:hover {
+      color: var(--hover-color);
+    }
   }
 }
 
@@ -315,4 +301,199 @@ section:nth-child(2n + 4) {
       }
     }
   }
+}
+@media screen and (max-width: 700px) {
+  body {
+    font-size: 10px; /* Smaller font for mobile devices */
+  }
+  section {
+    .sec-heading {
+      font-size: 1rem;
+    }
+  }
+  .landing-pane {
+    font-size: 0.5rem;
+    .intro {
+      .explore {
+        margin-top: 1vh;
+        font-size: 0.5rem;
+      }
+    }
+  }
+  .navigation-bar {
+    flex-direction: column;
+  }
+  .experience-flex {
+    flex-direction: column;
+    .exp-tabs {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
+      .exp-tab {
+        font-size: 0.5rem;
+        padding: 2% 5%;
+      }
+    }
+    .show-exp {
+      width: 80%;
+      margin: 5%;
+      .exp {
+        .comp-name {
+          font-size: 1rem;
+        }
+        .position {
+          font-size: 0.75rem;
+        }
+      }
+      .desc {
+        font-size: 0.5rem;
+      }
+    }
+  }
+  .projects {
+    .grid-container {
+      grid-template-columns: auto auto;
+      .grid-item {
+        flex-direction: row;
+        height: 8vh;
+        padding: 3%;
+        .prj-img {
+          height: 80%;
+        }
+        .prj-info {
+          padding-left: 5%;
+          .prj-title {
+            font-size: 0.6rem;
+          }
+          .prj-desc {
+            font-size: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+  .skills {
+    .skills-description {
+      font-size: 0.5rem;
+    }
+  }
+  .life {
+    .about-sec {
+      .about {
+        .about-desc {
+          font-size: 0.5rem;
+        }
+      }
+      .coffee-form {
+        width: 30%;
+        .book-coffee {
+          font-size: 0.5rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and ((min-width: 700px) and (max-width:1200px)) {
+  body {
+    font-size: 12px; /* Larger font for larger screens */
+  }
+  section {
+    .sec-heading {
+      font-size: 1.5rem;
+    }
+  }
+  .landing-pane {
+    font-size: 0.75rem;
+    .intro {
+      .explore {
+        margin-top: 1vh;
+        font-size: 0.75rem;
+      }
+    }
+  }
+  .experience-flex {
+    flex-direction: column;
+    .exp-tabs {
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
+      .exp-tab {
+        font-size: 0.75rem;
+        padding: 2% 5%;
+      }
+    }
+    .show-exp {
+      width: 80%;
+      margin: 5%;
+      .exp {
+        .comp-name {
+          font-size: 2rem;
+        }
+        .position {
+          font-size: 1.25rem;
+        }
+      }
+      .desc {
+        font-size: 1rem;
+      }
+    }
+  }
+  .projects {
+    .grid-container {
+      .grid-item {
+        height: 20vh;
+        .prj-info {
+          .prj-title {
+            font-size: 1.25rem;
+          }
+          .prj-desc {
+            font-size: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+  .skills {
+    .skills-description {
+      font-size: 1rem;
+    }
+  }
+  .life {
+    .about-sec {
+      .about {
+        .about-desc {
+          font-size: 0.75rem;
+        }
+      }
+      .coffee-form {
+        width: 30%;
+        .book-coffee {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    font-size: 18px;
+  }
+  .landing-pane {
+    font-size: 1.2rem;
+  }
+}
+
+section:nth-child(odd) {
+  background-color: var(--background-color);
+  padding-top: 0%;
+}
+section:nth-child(2n) {
+  background-color: var(--background-color-alt);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+}
+section:nth-child(2n + 4) {
+  background-color: var(--background-color-alt);
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0% 100%);
 }
